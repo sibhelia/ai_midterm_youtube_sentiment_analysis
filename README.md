@@ -20,7 +20,7 @@ Bu çalışma, **BMM4101 Yapay Zeka Teknikleri** dersi kapsamında geliştirilmi
 Proje, modern Doğal Dil İşleme (NLP) boru hattı (pipeline) üzerine kurulmuştur:
 
 | Teknoloji | Kullanım Amacı | Detay |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | **Gensim Word2Vec** | Özellik Çıkarımı | Kelimeleri 300 boyutlu vektörlere dönüştürme (Skip-Gram). Tüm tokenlerden model oluşturulmuştur. |
 | **Scikit-Learn MLP** | Sınıflandırma | "Geniş ve Kontrollü" Yapay Sinir Ağı ile sınıflandırma. |
 | **NLTK** | Ön İşleme | Metin temizliği, tokenization işlemleri. |
@@ -57,5 +57,78 @@ ai_midterm_youtube_sentiment_analysis/
 │   └── gui_visualization.py      # 🖥️ Arayüz
 │
 └── 📄 README.md             # Proje Dokümantasyonu
+```
 
+---
 
+## 🚀 Kurulum ve Çalıştırma
+
+Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyin.
+
+### 1. Gerekli Kütüphaneler
+
+Terminal veya komut satırında şu komutu çalıştırarak bağımlılıkları yükleyin:
+
+```bash
+pip install pandas numpy scikit-learn gensim nltk matplotlib seaborn google-api-python-client
+```
+
+### 2. Adım Adım Çalıştırma Rehberi
+
+#### Adım 1: Veri Çekme
+YouTube API kullanarak yorumları ve meta verileri indirin.
+
+```bash
+python src/data_acquisition.py
+```
+
+#### Adım 2: Model Eğitimi (Word2Vec)
+Metinleri ön işler (NLTK) ve sayısal vektörlere dönüştürür (Word2Vec).
+
+```bash
+python src/word2vec_preparation.py
+```
+
+#### Adım 3: Sınıflandırma Eğitimi (MLP)
+Yapay sinir ağını eğitir, 2 farklı modeli karşılaştırır ve performans metriklerini (Accuracy, F1 vb.) hesaplar.
+
+```bash
+python src/mlp_classifier.py
+```
+
+#### Adım 4: Tahmin
+Kendi çektiğimiz 40-50+ yorumu eğitilen model ile sınıflandırır.
+
+```bash
+python src/predict_user_comments.py
+```
+
+#### Adım 5: Sonuçları Gör (Arayüz)
+Analiz sonuçlarını görsel arayüzde inceleyin.
+
+```bash
+python src/gui_visualization.py
+```
+
+---
+
+## 📊 Performans Sonuçları
+
+Geliştirilen modellerin karşılaştırmalı başarı oranları aşağıdadır:
+
+| Model Adı | Mimari | Accuracy (Doğruluk) | F1-Score |
+|:---|:---|:---:|:---:|
+| **Model 1 (Final)** | Geniş Katman (500 Nöron) + Regularization | **%70.82** 🏆 | **0.70** |
+| **Model 2 (Alternatif)** | SGD Optimizasyonu + Tanh Aktivasyonu | %67.54 | 0.67 |
+
+**Analiz:** Yapılan deneylerde, Türkçe gibi eklemeli dillerde ve kısa sosyal medya yorumlarında; çok derin ağlar yerine geniş ve iyi regüle edilmiş (alpha=0.05) ağların daha iyi genelleme yaptığı ve ezberlemeyi (overfitting) engellediği görülmüştür. Ayrıca Stopwords temizliği yapılmaması başarıyı artırmıştır.
+
+---
+
+## 👤 Hazırlayan
+
+**Ad Soyad:** Sibel Akkurt
+**Numara:** 202213709048 
+**Bölüm:** Bilgisayar Mühendisliği
+
+Bu proje akademik amaçla hazırlanmıştır ve BMM4101 dersi vize ödevi gereksinimlerini karşılamaktadır.
