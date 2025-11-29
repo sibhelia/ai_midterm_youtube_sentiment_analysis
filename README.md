@@ -118,8 +118,8 @@ Geliştirilen modellerin karşılaştırmalı başarı oranları aşağıdadır:
 
 | Model Adı | Mimari | Accuracy (Doğruluk) | F1-Score |
 |:---|:---|:---:|:---:|
-| **Model 1 (Final)** | Geniş Katman (500 Nöron) + Regularization | **%70.82** 🏆 | **0.70** |
-| **Model 2 (Alternatif)** | SGD Optimizasyonu + Tanh Aktivasyonu | %67.54 | 0.67 |
+| **Model 1 (Final)** | Geniş Katman (500 Nöron) + Regularization | **%XX.XX** 🏆 | **AA.AA** |
+| **Model 2 (Alternatif)** | SGD Optimizasyonu + Tanh Aktivasyonu | %YY.YY | BB.BB |
 
 **Analiz:** Yapılan deneylerde, Türkçe gibi eklemeli dillerde ve kısa sosyal medya yorumlarında; çok derin ağlar yerine geniş ve iyi regüle edilmiş (alpha=0.05) ağların daha iyi genelleme yaptığı ve ezberlemeyi (overfitting) engellediği görülmüştür. Ayrıca Stopwords temizliği yapılmaması başarıyı artırmıştır.
 
