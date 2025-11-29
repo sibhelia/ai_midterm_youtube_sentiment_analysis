@@ -128,7 +128,9 @@ Geliştirilen modellerin karşılaştırmalı başarı oranları aşağıdadır:
 ## 👤 Hazırlayan
 
 **Ad Soyad:** Sibel Akkurt
+
 **Numara:** 202213709048 
+
 **Bölüm:** Bilgisayar Mühendisliği
 
 Bu proje akademik amaçla hazırlanmıştır ve BMM4101 dersi vize ödevi gereksinimlerini karşılamaktadır.
