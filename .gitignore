@@ -1,0 +1,26 @@
+# --- Python Sistem Dosyaları (Gereksiz) ---
+__pycache__/
+*.pyc
+.DS_Store
+
+# --- Sanal Ortam ve Editör Ayarları ---
+venv/
+env/
+.vscode/
+.idea/
+
+# --- MODELLER (Çok Büyük Dosyalar - Yüklenmemeli) ---
+# Modelleri tekrar eğitebiliriz, depoda yer kaplamasın.
+models/
+
+# --- VERİ DOSYALARI ---
+# Ara işlem dosyaları (npy) ve etiketler kodla üretiliyor, yüklemeye gerek yok.
+data/*.npy
+data/y_train_labels.csv
+
+# NOT: Eğitim setini de yüklemek istemiyorsanız (büyükse) alttaki satırın başındaki # işaretini kaldırın.
+# data/training_data_set.csv
+
+# Ancak kendi çektiğiniz yorumları ve tahmin sonuçlarını yüklemek iyidir:
+# data/user_comments_metadata.csv (Yüklenir)
+# data/user_comments_predicted.csv (Yüklenir)
