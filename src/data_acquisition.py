@@ -13,7 +13,7 @@ from googleapiclient.discovery import build
 # ------------------------------------------------------------------------------
 
 # 1. YouTube API Anahtarınızı tırnak içine yapıştırın:
-API_KEY = "AIzaSyCCWYW4dsD0oEjARL4xa5cQbu_XWKUudEI"
+API_KEY = "BURAYA_API_KEYINIZI_YAZIN"
 
 # 2. Analiz etmek istediğiniz videonun TAM LİNKİNİ buraya yapıştırın:
 # (Örnek: "https://www.youtube.com/watch?v=7foCbOktTZM" veya "https://youtu.be/..." olabilir)
