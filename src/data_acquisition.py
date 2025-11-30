@@ -8,7 +8,7 @@ import pandas as pd
 import os
 from googleapiclient.discovery import build
 
-API_KEY = "kendi anahtarınızı buraya ekleyin"
+API_KEY = "kendi_api_anahtariniz" 
 
 VIDEO_LINK = "https://www.youtube.com/watch?v=7foCbOktTZM"
 

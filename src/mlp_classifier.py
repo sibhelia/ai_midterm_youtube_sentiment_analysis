@@ -120,12 +120,10 @@ if __name__ == "__main__":
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
     
-    # Scaler modelinin kaydedilmesi 
     joblib.dump(scaler, os.path.join(MODELS_DIR, 'scaler.joblib'))
     
     results = []
     
-    # Modellerin sırayla eğitilmesi ve test edilmesi
     for name, config in MODEL_CONFIGS.items():
         print(f"\n  Model Eğitimi Başlatılıyor: {name} ...")
         
