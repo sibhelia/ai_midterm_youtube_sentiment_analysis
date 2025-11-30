@@ -37,12 +37,16 @@ fig = plt.figure(figsize=(12, 8))
 ax = fig.gca()
 ax.axis('off')
 
-# Temsili Nöron Sayıları 
-# Gerçekte 500 nöron var ama hepsini çizersek kapkara olur, o yüzden temsili çiziyoruz.
+
 draw_neural_net(ax, .1, .9, .15, .85, [8, 12, 3]) 
 
 plt.title("Model 1 (Geniş Mimari) Ağ Topolojisi", fontsize=15, pad=20)
 plt.tight_layout()
-plt.savefig('network_topology.png', dpi=300, bbox_inches='tight')
-print("Ağ topolojisi resmi 'network_topology.png' olarak kaydedildi.")
+
+output_dir = 'reports'
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, 'network_topology.png')
+
+plt.savefig(output_path, dpi=300, bbox_inches='tight')
+print(f"Ağ topolojisi resmi '{output_path}' olarak kaydedildi.")
 plt.show()
