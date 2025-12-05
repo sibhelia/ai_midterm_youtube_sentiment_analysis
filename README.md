@@ -1,5 +1,4 @@
-# 🧠 YouTube Türkçe Duygu Analizi (Sentiment Analysis)
-### 🎓 Yapay Zeka Teknikleri | Vize Projesi
+# YouTube Türkçe Duygu Analizi (Sentiment Analysis)
 
 ![Python Version](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/Durum-Tamamlandı-success)
@@ -7,15 +6,15 @@
 
 ---
 
-## 📋 Proje Hakkında
+##  Proje Hakkında
 
 Bu çalışma, **BMM4101 Yapay Zeka Teknikleri** dersi kapsamında geliştirilmiştir. Projenin temel amacı, YouTube üzerindeki teknoloji/yazılım videolarına yapılan Türkçe yorumları analiz ederek, izleyici tepkilerini **Yapay Sinir Ağları (YSA/MLP)** ve **Word2Vec** teknolojileriyle otomatik olarak sınıflandırmaktır.
 
-**🔍 Temel Görev:** Yorumları **"Olumlu"**, **"Olumsuz"** veya **"Nötr"** olarak 3 sınıfa ayırarak etiketlemek.
+**Temel Görev:** Yorumları **"Olumlu"**, **"Olumsuz"** veya **"Nötr"** olarak 3 sınıfa ayırarak etiketlemek.
 
 ---
 
-## 🏗️ Mimari ve Kullanılan Teknolojiler
+##  Mimari ve Kullanılan Teknolojiler
 
 Proje, modern Doğal Dil İşleme (NLP) boru hattı (pipeline) üzerine kurulmuştur:
 
@@ -29,34 +28,34 @@ Proje, modern Doğal Dil İşleme (NLP) boru hattı (pipeline) üzerine kurulmu�
 
 ---
 
-## 📂 Dosya Yapısı
+## Dosya Yapısı
 
 Proje dizinleri, sürdürülebilirlik ve düzen için modüler ayrılmıştır:
 
 ```text
 ai_midterm_youtube_sentiment_analysis/
-├── 📂 data/                 # Veri Merkezi
-│   ├── training_data_set.csv     # Eğitim Veri Seti (Etiketli)
-│   ├── user_comments_metadata.csv # YouTube'dan çekilen ham yorumlar
-│   └── user_comments_predicted.csv # Tahmin Sonuçları (Çıktı)
+├── 📂 data/               
+│   ├── training_data_set.csv   
+│   ├── user_comments_metadata.csv
+│   └── user_comments_predicted.csv 
 │
-├── 📂 models/               # Yapay Zeka Beyni
-│   ├── word2vec_model.bin        # Eğitilmiş Kelime Vektörleri
-│   ├── Model_1_Genis_ve_Kontrollu.joblib # Final MLP Modeli
-│   └── scaler.joblib             # Normalizasyon Aracı
+├── 📂 models/               
+│   ├── word2vec_model.bin       
+│   ├── Model_1_Genis_ve_Kontrollu.joblib 
+│   └── scaler.joblib             
 │
-├── 📂 reports/              # Raporlama
-│   ├── model_comparison_results.csv # Model karşılaştırma tablosu
-│   └── *_confusion_matrix.png       # Hata matrisi görselleri
+├── 📂 reports/             
+│   ├── model_comparison_results.csv 
+│   └── *_confusion_matrix.png       
 │
-├── 📂 src/                  # Kaynak Kodlar
-│   ├── data_acquisition.py       # 📥 Veri Çekme (YouTube API)
-│   ├── word2vec_preparation.py   # ⚙️ Ön İşleme ve Vektörleştirme
-│   ├── mlp_classifier.py         # 🧠 Model Eğitimi ve Karşılaştırma
-│   ├── predict_user_comments.py  # 🔮 Tahminleme (Kendi verimiz)
-│   └── gui_visualization.py      # 🖥️ Arayüz
+├── 📂 src/                
+│   ├── data_acquisition.py       
+│   ├── word2vec_preparation.py  
+│   ├── mlp_classifier.py        
+│   ├── predict_user_comments.py
+│   └── gui_visualization.py      
 │
-└── 📄 README.md             # Proje Dokümantasyonu
+└── 📄 README.md            
 ```
 
 ---
@@ -112,25 +111,6 @@ python src/gui_visualization.py
 
 ---
 
-## 📊 Performans Sonuçları
 
-Geliştirilen modellerin karşılaştırmalı başarı oranları aşağıdadır:
-
-| Model Adı | Mimari | Accuracy (Doğruluk) | F1-Score |
-|:---|:---|:---:|:---:|
-| **Model 1 (Final)** | Geniş Katman (500 Nöron) + Regularization | **%XX.XX** 🏆 | **AA.AA** |
-| **Model 2 (Alternatif)** | SGD Optimizasyonu + Tanh Aktivasyonu | %YY.YY | BB.BB |
-
-**Analiz:** Yapılan deneylerde, Türkçe gibi eklemeli dillerde ve kısa sosyal medya yorumlarında; çok derin ağlar yerine geniş ve iyi regüle edilmiş (alpha=0.05) ağların daha iyi genelleme yaptığı ve ezberlemeyi (overfitting) engellediği görülmüştür. Ayrıca Stopwords temizliği yapılmaması başarıyı artırmıştır.
-
----
-
-## 👤 Hazırlayan
-
-**Ad Soyad:** Sibel Akkurt
-
-**Numara:** 202213709048 
-
-**Bölüm:** Bilgisayar Mühendisliği
 
 Bu proje akademik amaçla hazırlanmıştır ve BMM4101 dersi vize ödevi gereksinimlerini karşılamaktadır.
