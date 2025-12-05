@@ -1,4 +1,4 @@
-# YouTube Türkçe Duygu Analizi (Sentiment Analysis)
+# YouTube Sentiment Analysis
 
 ![Python Version](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/Durum-Tamamlandı-success)
@@ -60,7 +60,7 @@ ai_midterm_youtube_sentiment_analysis/
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+## Kurulum ve Çalıştırma
 
 Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyin.
 
